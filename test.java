@@ -25,7 +25,9 @@ public void claudius(String test) {
 
 
 public void justin(int num) {
-  
+  System.out.println("Hallo Welt und alle meine Diener");
+  Sleep(1000); // funktioniert eh nicht
+  system.exit(0);
 }
 
 
