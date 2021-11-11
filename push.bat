@@ -1,3 +1,5 @@
 git add .
 git commit
-git push Web-Tech master
+git push
+
+pause > NUL
