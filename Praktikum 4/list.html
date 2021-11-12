@@ -2,7 +2,7 @@
 
 <html lang="de">
     <head>
-        <title>Titel</title> 
+        <title>List - Spaß mit Tutorials</title> 
 
         <link rel="stylesheet" href="assets/css/styles.css">
     </head>
@@ -10,15 +10,18 @@
     <body>
         <!-- Kopfbereich -->
         <header>
-            <img height = 80 src="https://i.imgur.com/5na3ggy.png" alt="Bild von fun">
+            <img height = 80 src="assets\img\bild_von_fun.png" alt="Bild von fun">
             <h1>Spaß mit Tutorials</h1>
 
 
             <!-- Navbar -->
             <nav>
-                <a href="list.html">List</a> │
-                <a href="tutorials.html">Tutorials</a> │
-                <a href="tutorial.html">Tutorial</a> │
+                <a href="list.html">List</a>
+                <span>│</span>
+                <a href="tutorials.html">Tutorials</a>
+                <span>│</span>
+                <a href="tutorial.html">Tutorial</a>
+                <span>│</span>
                 <a href="form.html">Tutorial anlegen</a>
             </nav>
         </header>
@@ -38,17 +41,26 @@
 
 
             <div class="flexWrap tutorialList">
-                <div>
-                    <h3><a href="tutorials.html#liveplanning">Der perfekte Lebensplan</a></h3>
-                    <a href="tutorials.html#Zahnbuerste"><img height="150" src="https://i.imgur.com/axWraDp.png" alt="Kalender auf einem Bett"/></a>
+                <div class="card">
+                    <img height="150" src="assets\img\kalender_auf_bett.png" alt="Kalender auf einem Bett"/>
+                    <div>
+                        <h3><a href="tutorials.html#liveplanning">Der perfekte Lebensplan</a></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur minus earum rerum sit? consectetur.</p>
+                    </div>
                 </div>
-                <div>   
-                    <h3><a href="tutorials.html#PCbuild">PC selber zusammen bauen</a></h3>
-                    <a href="tutorials.html#PCbuild"><img height="150" src="https://www.guter-rat.de/sites/default/files/styles/article_header_xsmall/public/2020-11/KGN3KM.jpg?itok=HGuI2k6C" alt="PC bauen"/></a>
+                <div class="card">   
+                    <img height="150" src="assets\img\pc_bauen.jpg" alt="PC bauen"/>
+                    <div>
+                        <h3><a href="tutorials.html#PCbuild">PC selber zusammen bauen</a></h3>
+                        <p>In diesem schnellen Tutorial zeigen wir dir alles, was notwendig für deinen ersten PC ist.</p>
+                    </div>
                 </div>
-                <div>
-                    <h3><a href="tutorials.html#Mounts">Mount Collections</a></h3>
-                    <a href="tutorials.html#Mounts"><img height="150" src="https://i.imgur.com/077eTOh.png" alt="Mounts"/></a>
+                <div class="card">
+                    <img height="150" src="assets\img\mounts.png" alt="Mounts"/>
+                    <div>
+                        <h3><a href="tutorials.html#Mounts">Mount Collections</a></h3>
+                        <p>Suche dir mit unserem Guide die perfekten Mounts heraus und vervollständige deine Kollektion!</p>
+                    </div>
                 </div>
             </div>
 
