@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <title>Flexbox Testseite</title>
+        <link rel="stylesheet" href="./assets/css/styles.css">
+        <link rel="stylesheet" href="./assets/css/flexbox.css">
+    </head>
+
+    <body>
+        
+        <div id="main">
+            <header>
+                <img height = 80 src="assets\img\bild_von_fun.png" alt="Bild von fun">
+                <h1>Spaß mit Tutorials</h1>
+            </header>
+            <nav>
+                <a href="list.html">List</a>
+                <span>│</span>
+                <a href="tutorials.html">Tutorials</a>
+                <span>│</span>
+                <a href="tutorial.html">Tutorial</a>
+                <span>│</span>
+                <a href="form.html">Tutorial anlegen</a>
+            </nav>
+
+
+            <!-- Haupt / Zusatz -->
+            <div id="content">
+
+                <!-- Hauptinhalt -->
+                <main id="mainContent">
+
+                    <!-- Suchformular -->
+                    <section id="search">
+                        <form action="list.html" method="get"> 
+                            <input id="formInput" type="text" placeholder="Name der Kategorie" name="search" size="20" minlength="4" maxlength="20" pattern="[A-Z]{1}[A-Za-z]{0,20}" required>
+                            <button type="submit" onclick="openTutorial()">Suchen!</button>
+                        </form>
+                    </section>
+
+                    <!-- Liste der Kategorien -->
+                    <section id="list">
+
+                        <div class="card">
+                            <img height="150" src="assets\img\kalender_auf_bett.png" alt="Kalender auf einem Bett"/>
+                            <div>
+                                <h3><a href="tutorials.html#liveplanning">Der perfekte Lebensplan</a></h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur minus earum rerum sit? consectetur.</p>
+                            </div>
+                        </div>
+
+                        <div class="card">   
+                            <img height="150" src="assets\img\pc_bauen.jpg" alt="PC bauen"/>
+                            <div>
+                                <h3><a href="tutorials.html#PCbuild">PC selber zusammen bauen</a></h3>
+                                <p>In diesem schnellen Tutorial zeigen wir dir alles, was notwendig für deinen ersten PC ist.</p>
+                            </div>
+                        </div>
+
+                        <div class="card">   
+                            <img height="150" src="assets\img\pc_bauen.jpg" alt="PC bauen"/>
+                            <div>
+                                <h3><a href="tutorials.html#PCbuild">PC selber zusammen bauen</a></h3>
+                                <p>In diesem schnellen Tutorial zeigen wir dir alles, was notwendig für deinen ersten PC ist.</p>
+                            </div>
+                        </div>
+
+                        <div class="card">   
+                            <img height="150" src="assets\img\pc_bauen.jpg" alt="PC bauen"/>
+                            <div>
+                                <h3><a href="tutorials.html#PCbuild">PC selber zusammen bauen</a></h3>
+                                <p>In diesem schnellen Tutorial zeigen wir dir alles, was notwendig für deinen ersten PC ist.</p>
+                            </div>
+                        </div>
+
+                        <div class="card">   
+                            <img height="150" src="assets\img\pc_bauen.jpg" alt="PC bauen"/>
+                            <div>
+                                <h3><a href="tutorials.html#PCbuild">PC selber zusammen bauen</a></h3>
+                                <p>In diesem schnellen Tutorial zeigen wir dir alles, was notwendig für deinen ersten PC ist.</p>
+                            </div>
+                        </div>
+
+                        <div class="card">   
+                            <img height="150" src="assets\img\pc_bauen.jpg" alt="PC bauen"/>
+                            <div>
+                                <h3><a href="tutorials.html#PCbuild">PC selber zusammen bauen</a></h3>
+                                <p>In diesem schnellen Tutorial zeigen wir dir alles, was notwendig für deinen ersten PC ist.</p>
+                            </div>
+                        </div>
+
+                        <div class="card">   
+                            <img height="150" src="assets\img\pc_bauen.jpg" alt="PC bauen"/>
+                            <div>
+                                <h3><a href="tutorials.html#PCbuild">PC selber zusammen bauen</a></h3>
+                                <p>In diesem schnellen Tutorial zeigen wir dir alles, was notwendig für deinen ersten PC ist.</p>
+                            </div>
+                        </div>
+
+                        <div class="card">   
+                            <img height="150" src="assets\img\pc_bauen.jpg" alt="PC bauen"/>
+                            <div>
+                                <h3><a href="tutorials.html#PCbuild">PC selber zusammen bauen</a></h3>
+                                <p>In diesem schnellen Tutorial zeigen wir dir alles, was notwendig für deinen ersten PC ist.</p>
+                            </div>
+                        </div>
+
+                        <div class="card">   
+                            <img height="150" src="assets\img\pc_bauen.jpg" alt="PC bauen"/>
+                            <div>
+                                <h3><a href="tutorials.html#PCbuild">PC selber zusammen bauen</a></h3>
+                                <p>In diesem schnellen Tutorial zeigen wir dir alles, was notwendig für deinen ersten PC ist.</p>
+                            </div>
+                        </div>
+
+                        <div class="card empty"></div>
+
+                    </section>
+
+                </main>
+
+                <!-- Zusatzinfos -->
+                <div id="addContent">
+                    <h3>Neuste Tutorials: </h3>
+                    <ul>
+                        <li>Titel, Datum, Dauer</li>
+                        <li>Titel, Datum, Dauer</li>
+                        <li>Titel, Datum, Dauer</li>
+                        <li>Titel, Datum, Dauer</li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <footer>
+                <a href="https://discord.gg/j5UQaPQNYf"><u>Managed by Kegelclub e.V. gGmbH</u></a>
+                <p><i>© by Tutorials Inc. e.V. gGmbH & co. KG partnered with Tutorial AG</i></p>
+            </footer>
+
+
+        </div>
+
+
+    </body>
+</html>
