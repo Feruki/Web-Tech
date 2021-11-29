@@ -30,7 +30,8 @@ body {
     flex-direction: column;
 }
 
-#content #mainContent #search {
+
+#content #mainContent #search, #content #mainContent #infoAndImg {
     display: flex;
     padding: 0.5em 1em;
 }
@@ -43,10 +44,18 @@ body {
     justify-content: space-around;
     padding: 0.5em 1em;
 }
+
 #content #mainContent #list .empty {
     visibility: hidden;
 }
 
+#content #mainContent #infoAndImg #tutorialInfo {
+    flex: 4;
+}
+
+#content #mainContent #infoAndImg #tutorialImg {
+    flex: 1;
+}
 
 #content #addContent {
     display: flex;
