@@ -9,19 +9,17 @@
         <header>
             <img height = 80 src="https://i.imgur.com/5na3ggy.png" alt="Bild von fun">
             <h2>Spaß mit Tutorials</h2>
-
-
-            <!-- Navbar -->
-            <nav>
-                <a href="list.html">List</a> │
-                <a href="tutorial.html">Tutorial</a> │
-                <a href="tutorials.html">Tutorials</a> │
-                <a href="form.html">Tutorial anlegen</a>
-            </nav>
         </header>
 
-        <hr>
+        <!-- Navbar -->
+        <nav>
+            <a href="list.html">List</a> │
+            <a href="tutorial.html">Tutorial</a> │
+            <a href="tutorials.html">Tutorials</a> │
+            <a href="form.html">Tutorial anlegen</a>
+        </nav>
 
+        <hr>
 
         <!-- Add new -->
         <!-- POST localhost/postTutorial -->
@@ -40,23 +38,20 @@
                 <option value="fr">Französisch</option>
             </select><br><br>
 
-
             <!-- Aabc, Z12345, F1bcj2df <=> [A-Z]{1}[a-z0-9]+ -->
             <label for="author">AuthorInnen: </label>
             <input type="text" id="author" name="author" placeholder="AuthorInnen" pattern="([A-Z]{1}[a-z0-9]+)+(,\s*[A-Z]{1}[a-z0-9]+)*"><br>
 
             <label for="categories">Kategorie(n): </label>
             <input type="text" id="categories" name="categories" placeholder="Kategorie(n)" pattern="([A-Za-z0-9])+(,\s*[A-Za-z0-9]+)*"><br><br>
-            
 
             <label for="description">Beschreibung:</label><br>
             <textarea name="description" id="description" placeholder="Beschreibung" cols="40" rows="10" minlength="40"></textarea><br>
-            
+
             <label for="date">Veröffentlichung und Dauer:</label><br>
             <input type="date" id="date" name="date">
             <input type="time" name="duration" value="00:20" min="00:20" max="16:00"><br><br>
             
-
             <label for="type">Inhaltstyp: </label>
             <select name="type" id="type">
                 <option value="text">Text</option>
@@ -66,9 +61,7 @@
             <label for="content">Link:</label><br>
             <input type="text" id="content" placeholder="pastebin.com" name="content"><br><br>
             
-            
             <button type="submit">Abschicken!</button>
-
         </form>
 
         <hr>
@@ -88,6 +81,5 @@
             <p><i>© by Tutorials Inc. e.V. gGmbH & co. KG partnered with Tutorial AG</i></p>
             <a href="https://discord.gg/j5UQaPQNYf"><u>Managed by Kegelclub e.V. gGmbH</u></a>
         </footer>
-
     </body>
 </html>
