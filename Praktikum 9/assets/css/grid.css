@@ -1,0 +1,67 @@
+:root {
+    --main-bg-color: #2f3136;
+    --darker: #202225;
+    --primary-color: #5865f2;
+
+    --white: #fafafb;
+    --darker-white: #7e848d;
+}
+
+
+/* Body */
+body {
+    display: grid;
+    height: 100vh;
+
+    grid-template-rows: auto auto 1fr auto;
+}
+/* Body end */
+
+/* Header */
+header {
+    display: grid;
+    gap: 1em;
+    justify-content: center;
+    padding: 1em;
+}
+
+header > * {
+    place-self: center;
+}
+/* Header end */
+
+/* Nav */
+nav {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    gap: 0.5em;
+}
+/* Nav end */
+
+/* Main */
+main {
+    display: grid;
+    grid-template-columns: 1fr auto
+}
+
+main > * {
+    padding: 1em;
+}
+
+/* Main end */
+
+/* Footer */
+footer {
+    display: grid;
+    padding: 1em;
+    gap: 1em;
+}
+/* Footer end */
+
+@media screen and (max-width: 1000px) {
+    main {
+        grid-template-columns: none;
+        grid-template-rows: auto auto;
+    }
+}

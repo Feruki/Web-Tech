@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Formular - Spaß mit Tutorials</title>
+        <link rel="stylesheet" href="assets/css/grid.css">
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- Kopfbereich -->
+        <header>
+            <img height = 80 src="https://i.imgur.com/5na3ggy.png" alt="Bild von fun">
+            <h1>Spaß mit Tutorials</h1>
+        </header>
+        
+        <!-- Nav Bereich -->
+        <nav>
+            <span id="burgerMenu">
+                <i class="fal fa-bars"></i>
+            </span>
+
+            <div id="navLinks">
+                <a href="list.html">List</a>
+                <span>│</span>
+                <a href="tutorials.html">Tutorials</a>
+                <span>│</span>
+                <a href="tutorial.html">Tutorial</a>
+                <span>│</span>
+                <a href="form.html">Tutorial anlegen</a>
+            </div>
+        </nav>
+
+        <!-- Haupt / Zusatz -->
+        <main>
+
+            <!-- Hauptinhalt -->
+            <div id="mainContent">
+
+                <!-- POST localhost/postTutorial -->
+                <!-- GET localhost/postTutorial?name=123&language=de -->
+                <form action="postTutorial" method="post">
+                    
+                    <fieldset>
+                        <legend><h2>Tutorial anlegen</h2></legend>
+                        
+                    
+                        <label for="name">Titel: </label>
+                        <input type="text" id="name" name="name" placeholder="Titel" minlength="4" maxlength="20" pattern="[A-Z]{1}[A-Za-z]{0,20}" required><br>
+                        
+                        <label for="language">Sprache: </label>
+                        <select id="language" name="language">
+                            <option value="none">-</option>
+                            <option value="de">Deutsch</option>
+                            <option value="en">Englisch</option>
+                            <option value="es">Spanisch</option>
+                            <option value="fr">Französisch</option>
+                        </select><br><br>
+
+
+                        <!-- Aabc, Z12345, F1bcj2df <=> [A-Z]{1}[a-z0-9]+ -->
+                        <label for="author">AuthorInnen: </label>
+                        <input type="text" id="author" name="author" placeholder="AuthorInnen" pattern="([A-Z]{1}[a-z0-9]+)+(,\s*[A-Z]{1}[a-z0-9]+)*" required><br>
+
+                        <label for="categories">Kategorie(n): </label>
+                        <input type="text" id="categories" name="categories" placeholder="Kategorie(n)" pattern="([A-Za-z0-9])+(,\s*[A-Za-z0-9]+)*" required><br><br>
+                        
+
+                        <label for="description">Beschreibung:</label><br>
+                        <textarea name="description" id="description" placeholder="Beschreibung" cols="40" rows="10" minlength="40"></textarea><br><br>
+                        
+                        <label for="date">Veröffentlichung und Dauer:</label><br>
+                        <input type="date" id="date" name="date" required>
+                        <input type="time" name="duration" value="00:00" min="00:20" max="16:00" required><br><br>
+                        
+
+                        <label for="type">Inhaltstyp: </label>
+                        <select name="type" id="type">
+                            <option value="text">Text</option>
+                            <option value="video">Video</option>
+                        </select><br>
+
+                        <input type="text" id="contentText" placeholder="pastebin.com" name="content" required>
+                        <textarea id="contentVideo" cols="40" rows="8" name="content" style="display: none;"></textarea>
+                        
+                        <br><br>
+                        
+                        
+                        <button type="submit">Abschicken</button>
+                    </fieldset>
+                </form>
+
+            </div>
+
+            <!-- Zusatzinformationen -->
+            <div id="addContent">
+                <h3>Neuste Tutorials: </h3>
+                <ul>
+                    <li>Titel, Datum, Dauer</li>
+                    <li>Titel, Datum, Dauer</li>
+                    <li>Titel, Datum, Dauer</li>
+                    <li>Titel, Datum, Dauer</li>
+                </ul>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <a href="https://discord.gg/j5UQaPQNYf"><u>Managed by Kegelclub e.V. gGmbH</u></a>
+            <p><i>© by Tutorials Inc. e.V. gGmbH & co. KG partnered with Tutorial AG</i></p>
+        </footer>
+
+            
+    </body>
+    <script src="./assets/js/form.js"></script>
+    <script src="./assets/js/burgerMenu.js"></script>
+</html>

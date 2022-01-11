@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+}
+
+:root {
+    --main-bg-color: #2f3136;
+    --darker: #202225;
+    --primary-color: #5865f2;
+
+    --white: #fafafb;
+    --darker-white: #7e848d;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    
+    background-color: var(--main-bg-color);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    gap: 1em;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding: 2em 0;
+}
+
+#content #mainContent {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2em;
+}
+
+/* #content #mainContent video */
+
+
+#content #mainContent #search, #content #mainContent #infoAndImg {
+    display: flex;
+    padding: 0.5em 1em;
+}
+
+#content #mainContent #list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em 1em;
+    justify-content: space-around;
+    padding: 0.5em 1em;
+}
+
+#content #mainContent #list .empty {
+    visibility: hidden;
+}
+
+#content #mainContent #infoAndImg #tutorialInfo {
+    flex: 4;
+}
+
+#content #mainContent #infoAndImg #tutorialImg {
+    flex: 1;
+}
+
+#content #addContent {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    padding: 0 1em;
+    text-align: right;
+
+    font-size: 0.75em;
+}
+
+/* Aufgabe P07 - A1.1 >> andere Pixel anzahl (768px not pretty) */
+@media screen and (max-width: 1000px) {
+    #content {
+        flex-direction: column;
+    }
+
+    #content #mainContent #search {
+        padding: 1em 0;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
