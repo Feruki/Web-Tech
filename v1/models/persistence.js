@@ -1,8 +1,10 @@
 var tutorials = [];
+var kategorien = [];
+
 
 
 //? 4. Ergänzen Sie den JavaScript-Code zusätzlich um eine nicht objektspezifische Hilfsfunktion
-module.exports.getDauerInStundenUndMinuten = function(dauer) {
+function getDauerInStundenUndMinuten(dauer) {
     if(typeof dauer != 'string') return null;
 
     const dauerSplit = dauer.split(':');
@@ -20,8 +22,7 @@ module.exports.getDauerInStundenUndMinuten = function(dauer) {
 //? aller Tutorial -Objekte zurückgeben, welche der Kategorie mit Namen kategorieName
 //? zugeordnet sind. Beispiel: getTutorialsZuKategorie("Web-Entwicklung") gibt alle
 //? Tutorials zur Kategorie "Web-Entwicklung" zurück.
-
-module.exports.getTutorialsZuKategorie = function(kategorieName) {
+function getTutorialsZuKategorie(kategorieName) {
     if(typeof kategorieName != 'string') return null;
 
     const result = [];
@@ -48,7 +49,7 @@ function tutorial(data) {
     this.datum = data.datum || Date.now();
     this.url = data.url || null;
     this.embedCode = data.embedCode || null;
-
+    
     this.kategorien = new Set(data.kategorien) || new Set();
     this.kapitelListe = new Set(data.kapitelListe) || new Set();
     
@@ -57,7 +58,7 @@ function tutorial(data) {
     this.fuegeKategorieHinzu = function(kat) {
         this.kategorien.add(kat);
     };
-
+    
     this.fuegeKapitelHinzu = function(kap) {
         this.kapitelListe.add(kap);
 
@@ -71,6 +72,7 @@ function tutorial(data) {
         for(let kapitel in this.kapitelListe) {
             newDauer += kapitel.dauer;
         }
+        this.dauer = newDauer;
     };
 
     tutorials.push(this);
@@ -80,8 +82,6 @@ function bild(data) {
     this.url = data.url || null;
     this.name = data.name || null;
 }
-
-var kategorien = [];
 
 function kategorie(data) {
     this.name = data.name || null;
@@ -219,7 +219,7 @@ const tutorial2 = new tutorial({
 //? ersetzen sind, Einrückungen dienen nur der Illustration):
 
 //? Gehe alle Kategorien durch
-module.exports.listeAlleObjekteAuf = () => {
+function listeAlleObjekteAuf() {
     for(let i = 0 ; i < kategorien.length ; i++) {
         const kategorie = kategorien[i];
     
@@ -246,3 +246,11 @@ module.exports.listeAlleObjekteAuf = () => {
     
     }
 };
+
+module.exports = {
+    listeAlleObjekteAuf,
+    getTutorialsZuKategorie,
+    getDauerInStundenUndMinuten,
+
+    tutorials
+}
